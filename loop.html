@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./loop.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <div class="bbox">
+        <div class="flex">
+          <button class="addButton">Add task</button>
+        </div>
+      </div>
+      <div class="grid__container">
+        <div class="grid__item">
+          <div class="title flex">
+            <div class="title1 flex">
+              <div style="background-color: white" class="bcircle"></div>
+              <p>To do</p>
+            </div>
+            <h3 class="plusNumber">0</h3>
+          </div>
+          <div class="todo_board"></div>
+        </div>
+
+        <div class="grid__item">
+          <div class="title flex">
+            <div class="title1 flex">
+              <div class="bcircle"></div>
+              <p>In progress</p>
+            </div>
+            <h3 class="plusNumber">0</h3>
+          </div>
+          <div class="inprogress_board"></div>
+        </div>
+        <div class="grid__item">
+          <div class="title flex">
+            <div class="title1 flex">
+              <div
+                style="background-color: rgba(0, 163, 0, 1)"
+                class="bcircle"
+              ></div>
+              <p>Done</p>
+            </div>
+            <h3 class="plusNumber">0</h3>
+          </div>
+          <div class="done_board"></div>
+        </div>
+        <div class="grid__item">
+          <div class="title flex">
+            <div class="title1 flex">
+              <div
+                style="background-color: rgba(163, 0, 0, 1)"
+                class="bcircle"
+              ></div>
+              <p>Blocked</p>
+            </div>
+            <h3 class="plusNumber">0</h3>
+          </div>
+          <div class="blocked_board"></div>
+        </div>
+      </div>
+    </div>
+    <div id="edit_task">
+      <div class="modal__content">
+        <p>Enter task</p>
+        <div>
+          <input
+            type=" text"
+            class="task"
+            id="edit_input"
+            placeholder="Task name..."
+          />
+        </div>
+
+        <div>
+          <select class="task" id="edit_select">
+            <option value="selectStatus" selected disabled>
+              Select Status
+            </option>
+            <option value="todo">To do</option>
+            <option value="inprogress">In progress</option>
+            <option value="done">Done</option>
+            <option value="block">Blocked</option>
+          </select>
+        </div>
+        <button class="editButton">Edit task</button>
+      </div>
+    </div>
+
+    <div class="model">
+      <div class="modal__content">
+        <p>Enter task</p>
+        <div>
+          <input
+            type=" text"
+            class="task"
+            id="task1"
+            placeholder="Task name..."
+          />
+        </div>
+
+        <div>
+          <select class="task" id="selectOption">
+            <option value="selectStatus" selected disabled>
+              Select Status
+            </option>
+            <option value="todo">To do</option>
+            <option value="inprogress">In progress</option>
+            <option value="done">Done</option>
+            <option value="block">Blocked</option>
+          </select>
+        </div>
+        <button class="submitButton">Submit</button>
+      </div>
+    </div>
+
+    <script src="./loop.js"></script>
+  </body>
+</html>
